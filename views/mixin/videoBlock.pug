@@ -1,5 +1,6 @@
 mixin videoBlock(dbVideo = {})
     .videoBlock
-        video.videoBlock__thumbnail(src=dbVideo.videoFile, controls=true)
-        h4.videoBlock__title=dbVideo.title
-        h6.videoBlock__view=dbVideo.views
+        a(href=routes.videoDetail(dbVideo.id))
+            video.videoBlock__thumbnail(src=dbVideo.videoFile, controls=true)
+            h4.videoBlock__title=dbVideo.title
+            h6.videoBlock__view=dbVideo.views
